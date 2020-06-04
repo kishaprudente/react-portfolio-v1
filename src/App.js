@@ -1,7 +1,14 @@
 import React from "react";
-import { Grommet } from "grommet";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import { Grommet, Box, Header } from "grommet";
 import { grommet } from "grommet/themes";
 import { deepMerge } from "grommet/utils";
+
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+
 import NavBar from "./components/NavBar";
 
 const customTheme = deepMerge(grommet, {
@@ -21,9 +28,18 @@ const customTheme = deepMerge(grommet, {
 
 function App() {
 	return (
-		<Grommet full theme={customTheme}>
-			<NavBar />
-		</Grommet>
+		<Router>
+			<Grommet full theme={customTheme}>
+				<Header pad="medium">
+					<Box direction="row" align="center" gap="small">
+						<NavBar />
+					</Box>
+				</Header>
+				<Route exact path="/" component={About} />
+				<Route exact path="/projects" component={Projects} />
+				<Route exact path="/contact" component={Contact} />
+			</Grommet>
+		</Router>
 	);
 }
 
