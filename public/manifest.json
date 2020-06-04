@@ -1,6 +1,6 @@
 {
-	"short_name": "React App",
-	"name": "Create React App Sample",
+	"short_name": "React Portfolio",
+	"name": "My React Portfolio v1",
 	"start_url": ".",
 	"display": "standalone",
 	"theme_color": "#000000",
