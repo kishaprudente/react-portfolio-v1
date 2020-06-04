@@ -12,6 +12,13 @@ import Contact from "./pages/Contact";
 import NavBar from "./components/NavBar";
 
 const customTheme = deepMerge(grommet, {
+	global: {
+		font: {
+			family: "Lato",
+			size: "18px",
+			height: "20px",
+		},
+	},
 	anchor: {
 		textDecoration: "none",
 		fontWeight: 500,
@@ -35,9 +42,11 @@ function App() {
 						<NavBar />
 					</Box>
 				</Header>
-				<Route exact path="/" component={About} />
-				<Route exact path="/projects" component={Projects} />
-				<Route exact path="/contact" component={Contact} />
+				<Box align="center">
+					<Route exact path="/" component={About} />
+					<Route exact path="/projects" component={Projects} />
+					<Route exact path="/contact" component={Contact} />
+				</Box>
 			</Grommet>
 		</Router>
 	);

@@ -9,7 +9,7 @@ const navItems = [
 ];
 
 const NavBar = () => (
-	<Nav direction="row" align="right">
+	<Nav direction="row">
 		{navItems.map((item) => (
 			<Anchor href={item.href} label={item.label} key={item.label}>
 				<Link to={item.href} />
