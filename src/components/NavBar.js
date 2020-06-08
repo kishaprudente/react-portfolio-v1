@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Nav, Box, Anchor } from "grommet";
+import { Header, Nav, Box, Anchor, Menu, ResponsiveContext } from "grommet";
 import { Link } from "react-router-dom";
 
 const navItems = [
@@ -8,6 +8,8 @@ const navItems = [
 	{ label: "contact", href: "/contact" },
 	{ label: "skills", href: "/skills" },
 ];
+
+const { Consumer } = ResponsiveContext;
 
 export function HeaderContainer({children}) {
 	return(
@@ -25,11 +27,15 @@ export function NavBar() {
 				Kisha Prudente
 				</Anchor>
 			</Box>
-			<Nav direction="row">
-				{navItems.map(item => (
-				<Link style={styles.link} to={item.href} key={item.label}>{item.label}</Link>
-				))}
-			</Nav>
+			<Consumer>
+			{size => size === "small" ? null : (
+				<Nav direction="row">
+					{navItems.map(item => (
+					<Link style={styles.link} to={item.href} key={item.label}>{item.label}</Link>
+					))}
+				</Nav>
+			)}
+			</Consumer>
 		</Header>
 	)
 }
@@ -38,6 +44,9 @@ const styles = {
 	link: {
 		textDecoration: "none",
 		color: "black",
-
+		focus: {
+			color: "pink",
+			size: "20px"
+		}
 	},
 };
