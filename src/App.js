@@ -1,55 +1,84 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import { Grommet, Box, Header } from "grommet";
-import { grommet } from "grommet/themes";
+import { Grommet, Main, ResponsiveContext } from "grommet";
+import { dark } from "grommet/themes";
 import { deepMerge } from "grommet/utils";
 
+import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Skills from "./pages/Skills";
 
-import NavBar from "./components/NavBar";
+import { NavBar } from "./components/NavBar";
+import FooterComponent from "./components/Footer";
 
-const customTheme = deepMerge(grommet, {
-	global: {
-		font: {
-			family: "Lato",
-			size: "18px",
-			height: "20px",
-		},
-	},
-	anchor: {
-		textDecoration: "none",
-		fontWeight: 500,
-		color: {
-			dark: "white",
-			light: "neutral-2",
-		},
-		hover: {
-			textDecoration: "none",
-			fontWeight: 700,
-		},
-	},
-});
+const { Consumer } = ResponsiveContext;
 
 function App() {
 	return (
 		<Router>
-			<Grommet full theme={customTheme}>
-				<Header pad="medium">
-					<Box direction="row" align="center" gap="small">
-						<NavBar />
-					</Box>
-				</Header>
-				<Box align="center">
-					<Route exact path="/" component={About} />
+			<Grommet background="white" full theme={customTheme}>
+				<NavBar />
+				<Main
+					align="center"
+					border={{ side: "top", size: "small", color: "black" }}
+				>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/about" component={About} />
 					<Route exact path="/projects" component={Projects} />
+					<Route exact path="/skills" component={Skills} />
 					<Route exact path="/contact" component={Contact} />
-				</Box>
+				</Main>
+				<FooterComponent />
 			</Grommet>
 		</Router>
 	);
 }
 
 export default App;
+
+const customTheme = deepMerge(dark, {
+	global: {
+		font: {
+			family: "Lato",
+			size: "18px",
+			height: "20px",
+			color: "white",
+		},
+		breakpoints: {
+			small: {
+				value: 768,
+				borderSize: {
+					xsmall: "1px",
+					small: "2px",
+					medium: "4px",
+					large: "6px",
+					xlarge: "12px",
+				},
+				edgeSize: {
+					none: "0px",
+					hair: "1px",
+					xxsmall: "2px",
+					xsmall: "3px",
+					small: "6px",
+					medium: "12px",
+					large: "24px",
+					xlarge: "48px",
+				},
+				size: {
+					xxsmall: "24px",
+					xsmall: "48px",
+					small: "96px",
+					medium: "192px",
+					large: "384px",
+					xlarge: "768px",
+					full: "100%",
+				},
+			},
+			medium: { value: 1536 },
+			large: {},
+		},
+	},
+});
