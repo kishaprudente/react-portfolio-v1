@@ -1,12 +1,13 @@
 import React from "react";
-import { Header, Nav, Box, Anchor, Menu, ResponsiveContext } from "grommet";
+import { Header, Nav, Box, Anchor, Image, ResponsiveContext } from "grommet";
 import { Link } from "react-router-dom";
+import KPLogo from '../assets/KPlogo.png'
 
 const navItems = [
-	{ label: "about", href: "/about" },
-	{ label: "projects", href: "/projects" },
-	{ label: "contact", href: "/contact" },
-	{ label: "skills", href: "/skills" },
+	{ label: "ABOUT", href: "/about" },
+	{ label: "PROJECTS", href: "/projects" },
+	{ label: "SKILLS", href: "/skills" },
+	{ label: "CONTACT", href: "/contact" },
 ];
 
 const { Consumer } = ResponsiveContext;
@@ -19,12 +20,11 @@ export function HeaderContainer({children}) {
 	)
 }
 export function NavBar() {
-	// const location = useLocation();
 	return(
-		<Header pad="medium" style={styles.header}>
+		<Header pad="small" style={styles.header}>
 			<Box direction="row" gap="medium">
 				<Anchor color="black" href="/">
-				Kisha Prudente
+				<Image style={{width: '90px', height: '60px'}} src={KPLogo} />
 				</Anchor>
 			</Box>
 			<Consumer>
