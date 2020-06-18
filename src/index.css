@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Karla';
+  src: local('Karla'), url(./fonts/Karla-Regular.ttf) format('truetype');
+  src: local('KarlaBold'), url(./fonts/Karla-Bold.ttf) format('truetype');
+  src: local('KarlaBoldItalic'),
+    url(./fonts/Karla-BoldItalic.ttf) format('truetype');
+}
