@@ -24,7 +24,7 @@ export function NavBar() {
 		<Header pad="small" style={styles.header}>
 			<Box direction="row" gap="medium">
 				<Anchor color="black" href="/">
-				<Image style={{width: '90px', height: '60px'}} src={KPLogo} />
+				<Image style={{width: '100px', height: '70px'}} src={KPLogo} />
 				</Anchor>
 			</Box>
 			<Consumer>
