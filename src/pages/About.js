@@ -7,7 +7,7 @@ import KPLogo from '../assets/KPlogo.png'
 const Container = styled(Box)`
   display: flex;
   justify-content: center;
-  padding: 3em;
+  padding: 1.5em;
 `;
 
 const StyledText = styled(Text)`
