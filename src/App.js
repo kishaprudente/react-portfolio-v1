@@ -39,10 +39,10 @@ export default App;
 const customTheme = deepMerge(dark, {
 	global: {
 		font: {
-			family: "Lato",
-			size: "18px",
-			height: "20px",
-			color: "white",
+			family: 'Karla',
+			size: '18px',
+			height: '20px',
+			color: 'white',
 		},
 		breakpoints: {
 			small: { value: 768 },
