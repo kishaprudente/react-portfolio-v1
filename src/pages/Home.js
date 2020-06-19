@@ -64,21 +64,3 @@ const Home = () => {
 }
 
 export default Home;
-
-const styles = {
-      image: {
-        borderRadius: '100px',
-        width: '200px',
-        height: '200px',
-        display: 'flex',
-        alignSelf: 'center',
-      },
-      text: {
-        alignSelf: 'center',
-        fontSize: '25px',
-        fontFamily: 'KarlaBold',
-        fontWeight: 'Bolder',
-        color: 'black',
-        textShadow: '2px 2px darkgrey',
-      },
-}
