@@ -1,8 +1,10 @@
 import React from "react";
 import styled from 'styled-components';
-import { Box, Text, Image, Anchor } from "grommet";
+import { Link } from 'react-router-dom'
+import { Box, Text, Image, Anchor, Button } from "grommet";
 import { Facebook, Linkedin, Github, Instagram, Mail } from 'grommet-icons';
 import About from "./About";
+import Projects from './Projects';
 import myPhoto from '../assets/my-photo.jpg';
 import flowerbg from '../assets/flowerbg.jpg';
 
@@ -41,6 +43,11 @@ const MyPhoto = styled(Image)`
     align-self: center;
 `;
 
+const ProjectButton = styled(Button)`
+    text-align: center;
+    align-self: center;
+`;
+
 const Home = () => {
     return(
         <div>
@@ -57,8 +64,10 @@ const Home = () => {
                     <Anchor icon={<Facebook />} href='https://www.facebook.com/kishaax'/>
                     <Anchor icon={<Mail />} href='mailto:kisha.prudente@gmail.com'/>
                 </StyledLinks>
+                <ProjectButton size='medium' label='See My Work' path='/projects'/>
             </Hero>
             <About />
+            <Projects />
         </div>
     )
 }
