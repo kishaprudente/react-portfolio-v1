@@ -1,33 +1,39 @@
+import touristee from '../assets/touristee.png';
+import burgers from '../assets/eat-da-burgers.png';
+import employeeSummary from '../assets/employee-summary.png';
+import weatherDashboard from '../assets/weather-dashboard.png';
+import dayScheduler from '../assets/day-scheduler.png';
+
 const projects = [
     {
         title: "Touristee",
         repo: "https://github.com/kishaprudente/touristee",
         demo: "https://kishaprudente.github.io/touristee/",
-        image: "../../assets/touristee.png"
+        image: touristee,
     },
     {
         title: "Eat Da Burgers!",
         repo: "https://github.com/kishaprudente/eat-da-burger",
         demo: "https://polar-dusk-74766.herokuapp.com/",
-        image: "../../assets/eat-da-burgers.png"
+        image: burgers,
     },
     {
         title: "Employee Summary",
         repo: "https://github.com/kishaprudente/employee-summary",
         demo: "https://kishaprudente.github.io/employee-summary/",
-        image: "../../assets/employee-summary.png"
+        image: employeeSummary,
     },
     {
         title: "Weather Dashboard",
         repo: "https://github.com/kishaprudente/weather-dashboard",
         demo: "https://kishaprudente.github.io/weather-dashboard/",
-        image: "../../assets/weather-dashboard.png"
+        image: weatherDashboard,
     },
     {
         title: "Day Scheduler",
         repo: "https://github.com/kishaprudente/day-scheduler",
         demo: "https://kishaprudente.github.io/day-scheduler/",
-        image: "../../assets/day-scheduler.png"
+        image: dayScheduler,
     },
 ]
 
