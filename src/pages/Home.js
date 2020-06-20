@@ -1,6 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
 import { Box, Text, Image, Anchor, Button } from "grommet";
 import { Facebook, Linkedin, Github, Instagram, Mail } from 'grommet-icons';
 import About from "./About";
