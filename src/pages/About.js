@@ -14,6 +14,7 @@ const Container = styled(Box)`
 const Body = styled(Box)`
   padding-right: 1.5em;
   padding-left: 1.5em;
+  text-align: center;
 `;
 
 const Logo = styled(Image)`
@@ -25,14 +26,14 @@ const About = () => {
   return (
     <Container>
       <PageTitle>ABOUT ME</PageTitle>
-      <Responsive>
+      <Responsive pad='medium'>
       <Body>
           <Logo src={Self} />
       </Body>
       <Body>
-          <p>Hi, My name is Kisha Prudente.</p>
+          <p>H E L L O !</p>
           <p>
-            Currently based in New York City. I graduated with a Bachelor's in
+          My name is Kisha Prudente. Currently based in New York City. I graduated with a Bachelor's in
             Software Engineering in the Philippines. I like to eat, sleep and
             code. I aim to develop high quality software, mobile, and web
             application with clean, elegant and efficient code.
