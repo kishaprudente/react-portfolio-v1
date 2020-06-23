@@ -5,6 +5,7 @@ import { Heading } from 'grommet';
 const StyledTitle = styled(Heading)`
   padding: 0.3em;
   font-family: Karla;
+  text-align: center;
 `;
 
 
