@@ -2,12 +2,13 @@ import React from 'react';
 import { Header, Nav, Box, Anchor, Image, ResponsiveContext } from 'grommet';
 import { Link } from 'react-router-dom';
 import KPLogo from '../assets/KPlogo.png';
+import Resume from '../assets/Resume.pdf';
 
 const navItems = [
   { label: 'ABOUT', href: '/about' },
   { label: 'PROJECTS', href: '/projects' },
   { label: 'SKILLS', href: '/skills' },
-  { label: 'CONTACT', href: '/contact' },
+  // { label: 'RESUME', href: Resume },
 ];
 
 const { Consumer } = ResponsiveContext;
@@ -29,6 +30,7 @@ export function NavBar() {
                   {item.label}
                 </Link>
               ))}
+              <Anchor label='RESUME' href={Resume}/>
             </Nav>
           )
         }

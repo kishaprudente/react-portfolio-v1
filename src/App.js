@@ -8,7 +8,7 @@ import { deepMerge } from 'grommet/utils';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+// import Contact from './pages/Contact';
 import Skills from './pages/Skills';
 
 import { NavBar } from './components/NavBar';
@@ -24,7 +24,7 @@ function App() {
           <Route exact path='/about' component={About} />
           <Route exact path='/projects' component={Projects} />
           <Route exact path='/skills' component={Skills} />
-          <Route exact path='/contact' component={Contact} />
+          {/* <Route exact path='/contact' component={Contact} /> */}
         </Main>
         <FooterComponent />
       </Grommet>
