@@ -30,13 +30,13 @@ const About = () => {
       <Body>
           <Logo src={Self} />
       </Body>
-      <Body>
+      <Body gap='small'>
           <p>H E L L O !</p>
           <p>
-          My name is Kisha Prudente. Currently based in New York City. I graduated with a Bachelor's in
-            Software Engineering in the Philippines. I like to eat, sleep and
-            code. I aim to develop high quality software, mobile, and web
-            application with clean, elegant and efficient code.
+          My name is Kisha Prudente. Currently based in New York City.
+          </p>
+          <p style={{ lineHeight: 1.5 }}>
+          I am a Software Engineer devoted to making acceptable and high quality software and web applications. I am skilled in Web Development, ReactJS, JavaScript, NodeJS, Test Driven Development with a strong foundation in Agile methodologies and Sprint planning. I have a Bachelor’s degree in Software Engineering and a certificate in Full-Stack Web Development from Columbia University Engineering. I mostly take on the role of Full Stack Developer. I Look forward to being part of a team to develop better quality software and web applications.
           </p>
         </Body>
       </Responsive>
