@@ -5,6 +5,7 @@ import { Box, Text, Image, Anchor, Button } from 'grommet';
 import { Facebook, Linkedin, Github, Instagram, Mail } from 'grommet-icons';
 import About from './About';
 import Projects from './Projects';
+import Skills from './Skills';
 import myPhoto from '../assets/my-photo.jpg';
 import flowerbg from '../assets/flowerbg.jpg';
 
@@ -79,6 +80,7 @@ const Home = () => {
       </Hero>
       <About />
       <Projects />
+      <Skills />
     </div>
   );
 };
