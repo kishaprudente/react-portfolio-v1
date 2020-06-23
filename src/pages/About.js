@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Grid, Box, Image } from 'grommet';
-import KPLogo from '../assets/KPlogo.png';
+import { Box, Image } from 'grommet';
 import Self from '../assets/self.jpg'
 import PageTitle from '../components/PageTitle';
 import Responsive from '../components/Responsive';
